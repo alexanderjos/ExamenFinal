@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de Usuarios</title>
+</head>
+<body>
+    <h1>Reporte de Usuarios</h1>
+    <p>Fecha: [[${fecha}]]</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="usuario : ${registros}">
+                <td th:text="${usuario.id}"></td>
+                <td th:text="${usuario.email}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
